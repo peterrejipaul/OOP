@@ -1,9 +1,5 @@
 package pl_java.exercise_2;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.time.LocalDateTime;
-
 public class Profile {
 
 /*
@@ -12,9 +8,9 @@ public class Profile {
     String name;
     String countryCode;
     String phoneNo;
-    URI profilePhotoUrl;
+    String profilePhotoUrl;
     String about;
-    LocalDateTime lastSeen;
+    String lastSeen;
 
 
 /*
@@ -25,7 +21,6 @@ public class Profile {
 /*
  * Getters
  */
-
 
 
 /*
@@ -40,8 +35,8 @@ public class Profile {
             this.phoneNo = phoneNo;
     }
 
-    public void setProfilePhotoUrl(String profilePhotoUrl) throws URISyntaxException{
-        this.profilePhotoUrl = new URI(profilePhotoUrl);
+    public void setProfilePhotoUrl(String profilePhotoUrl){
+        this.profilePhotoUrl = profilePhotoUrl;
     }
 
     public void setAbout(String about){
@@ -52,7 +47,7 @@ public class Profile {
 /*
  * Methods
  */
-    public void updateLastSeen(LocalDateTime lastSeen){
+    public void updateLastSeen(String lastSeen){
             this.lastSeen = lastSeen;
     }
 }
